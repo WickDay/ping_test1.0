@@ -4,7 +4,6 @@ import getopt
 import threading
 import subprocess
 
-# define some global variables
 
 listen = False
 command = False
