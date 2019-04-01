@@ -12,12 +12,10 @@ if (( "$t" < "100" )); then
 
 elif (( "$t" >  "100" )); then
     echo "$ip is showing high latency. Check logs to see ping."
-    echo "$ip is showing high latency." | mail -s "Server Warning" Derek@ReknD.local
     echo "$(date): $ip is showing high latency. The higher end of the ping is :$t" >>  ping_log.txt
 
 else
     echo "$ip is OFFLINE. Reporting to user."
-    echo "There is an issue connecting with the server. Please try again or use a different destination to ping. Check logs to see problems." | mail -s "Server Alert" Derek@ReknD.local
     echo "$(date): $ip is offline. Try something else." >> ping_log.txt
 
 fi
